@@ -1,0 +1,28 @@
+.slider
+    +d-flex($jc: center, $ai: center)
+    margin-top: 120px
+    & .arrow
+        +font($size: 200px, $color: rgba(128, 128, 128, 0.5))
+    & .arrow-left
+        margin-right: 50px
+    & .arrow-right
+        margin-left: 50px    
+    &-container
+        width: 1200px
+        +d-flex($jc: space-between)
+    &-item
+        +d-flex($ai: center, $dir: column)
+        flex: 1 1 300px
+        &__img img
+            opacity: 0.5
+        &__text
+            +font($size: 24px, $color: black)
+            margin-top: 30px
+            text-transform: uppercase
+            opacity: 0
+        &-active .slider-item__img img
+            opacity: 1
+        &-active .slider-item__text 
+            opacity: 1
+            
+            
